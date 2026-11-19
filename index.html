@@ -1,0 +1,27 @@
+const db = globalThis.__B44_DB__ || { auth:{ isAuthenticated: async()=>false, me: async()=>null }, entities:new Proxy({}, { get:()=>({ filter:async()=>[], get:async()=>null, create:async()=>({}), update:async()=>({}), delete:async()=>({}) }) }), integrations:{ Core:{ UploadFile:async()=>({ file_url:'' }) } } };
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://db.com/logo_v2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta
+      name="description"
+      content="Model Lab — train a next-word model, a CSV text classifier, and a media analyzer directly in your browser."
+    />
+    <meta name="theme-color" content="#0d0d17" />
+    <meta property="og:title" content="Model Lab" />
+    <meta
+      property="og:description"
+      content="Train a next-word model, a CSV text classifier, and a media analyzer directly in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <title>Model Lab — train models in your browser</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
